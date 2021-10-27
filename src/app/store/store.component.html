@@ -1,0 +1,15 @@
+<h1>Welcome to the Store</h1>
+
+<ng-container *ngFor="let item of myinv">
+    <app-store-item [theItem]="item"></app-store-item>
+</ng-container>
+
+<div>
+    Name: <input type="text" [(ngModel)]="newName" /><br />
+    Price: <input type="text" [(ngModel)]="newPrice" /><br />
+    Quantity: <input type="text" [(ngModel)]="newQuantity" /><br />
+    <button (click)="addItem()">Add</button>
+</div>
+
+<br /><br /><br />
+<button (click)="debug()">Debug</button>
